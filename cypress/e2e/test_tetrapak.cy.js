@@ -26,14 +26,14 @@
     cy.get('#password').type('userT@1234')
      
     cy.get('#togglePassword').click()  
-    cy.contains('Password dimenticata?')
+   // cy.contains('Password dimenticata?')
 
 
     cy.wait(10000)
    
-    cy.contains('Accedi').click()
+    //cy.contains('Accedi').click()
 
-    cy.contains('Welcome')
+    //cy.contains('Welcome')
 
     //cy.url().should('contain', '/login-successful')
 

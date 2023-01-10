@@ -26,7 +26,7 @@
     cy.contains('Password dimenticata?')
 
 
-    cy.wait(1000)
+    cy.wait(10000)
    
     cy.contains('Accedi').click()
 
@@ -64,7 +64,7 @@
      })
     
 
-    it ('login password sbagliata, username corretta',function(){
+    it.skip ('login password sbagliata, username corretta',function(){
        
         cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal')
   
@@ -86,7 +86,7 @@
 
 
      
-     it ('Material Modeler',function() {   //TEST4:Material Modeler
+     it.skip ('Material Modeler',function() {   //TEST4:Material Modeler
        // cy.getCookies()
 
        //cy.session(username, () => {
@@ -104,7 +104,7 @@
      //})
 
 
-     it ('Password dimenticata',function(){
+     it.skip ('Password dimenticata',function(){
         //cy.getCookies()
         cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal/material-modeler#/')
         

@@ -1,0 +1,24 @@
+{
+  "name": "cypressproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "merge-reports": "mochawesome-merge ./cypress/reports/*.json > ./ReportTetrapak_03.json",
+    "generate-htmlreport": "marge ./ReportTetrapak_03.json --reportDir ./cypress/reports"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mochawesome-merge": "^4.2.2",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "devDependencies": {
+    "cypress": "^12.2.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "cypress-slow-down": "^1.2.1"
+  }
+}

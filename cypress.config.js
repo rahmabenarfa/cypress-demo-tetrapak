@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     watchForFileChanges:false, //test non runna in automatico 
-    defaultCommandTimeout:5000, //default 4000
+    defaultCommandTimeout:10000, //default 4000
     "reporter":"mochawesome",
     "reporterOptions" : {
       "charts" : true,
@@ -18,3 +18,5 @@ module.exports = defineConfig({
     },
   },
 });
+
+

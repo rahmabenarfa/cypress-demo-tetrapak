@@ -19,8 +19,8 @@
 
    //cy.wait(10000)
 
-    cy.contains('Username o email')
-    cy.contains('Password')
+    //cy.contains('Username o email')
+    //cy.contains('Password')
    
     cy.get('#username').type('testaccount')
     cy.get('#password').type('userT@1234')

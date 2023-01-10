@@ -16,6 +16,7 @@
         
 
     cy.get('.login-pf-page')
+    cy.wait(10000)
     cy.contains('Username o email')
     cy.contains('Password')
    

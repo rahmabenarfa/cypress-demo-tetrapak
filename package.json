@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "merge-reports": "mochawesome-merge ./cypress/reports/*.json > ./ReportTetrapak_03.json",
-    "generate-htmlreport": "marge ./ReportTetrapak_03.json --reportDir ./cypress/reports"
+    "generate-htmlreport": "marge ./ReportTetrapak_03.json --reportDir ./cypress/reports",
+    "cy:report": "cypress run"
+
   },
   "keywords": [],
   "author": "",

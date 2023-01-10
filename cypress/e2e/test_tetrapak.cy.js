@@ -19,6 +19,8 @@
 
    //cy.wait(10000)
 
+
+   cy.get('#usernameFormGroup > .control-label').contains('Username o email')
     //cy.contains('Username o email')
     //cy.contains('Password')
    

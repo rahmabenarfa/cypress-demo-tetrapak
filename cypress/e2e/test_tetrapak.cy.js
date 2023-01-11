@@ -20,15 +20,19 @@
    //cy.wait(10000)
 
 
-   //cy.get('#usernameFormGroup > .Username o email')
-    cy.get('control-label>Username or email')
+   //cy.get('#usernameFormGroup > .Username o email') NON VA BENE 
+    //cy.get('control-label>Username or email')       NON VA BENE 
 
+    cy.get('#reset-password')
+
+    //cy.contains('Password dimenticata?')
+  
    
 
    //<label for="username" class="control-label">Username or email</label>
 
 
-    //cy.contains('Username o email')
+    //cy.contains('Username or email')
     //cy.contains('Password')
    
     cy.get('#username').type('testaccount')

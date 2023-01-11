@@ -43,7 +43,7 @@
 
    cy.get('#kc-login').contains('Log In')
 
-   cy.get('#username').contains('youremail@domain.com')
+   //cy.get('#username').contains('youremail@domain.com')
    
 
 

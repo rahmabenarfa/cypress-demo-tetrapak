@@ -23,7 +23,7 @@
    //cy.get('#usernameFormGroup > .Username o email') NON VA BENE 
     //cy.get('control-label>Username or email')       NON VA BENE 
 
-    cy.get('#reset-password')
+    cy.get('#reset-password').contains('Forgot Password?')
 
     //cy.contains('Password dimenticata?')
   

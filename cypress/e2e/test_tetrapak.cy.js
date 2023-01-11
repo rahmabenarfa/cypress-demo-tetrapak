@@ -15,7 +15,7 @@
   
         
 
-   // cy.get('.login-pf-page')
+    cy.get('.login-pf-page')
 
    //cy.wait(10000)
 

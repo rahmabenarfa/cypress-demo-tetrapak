@@ -35,8 +35,11 @@
    cy.get('#usernameFormGroup').contains('Username or email')   //all'interno di contains bisogna inserire una stringa che contenga anche solo una parte della stringa originale es: Username or emai
 
         
-   cy.get('#usernameFormGroup').contains('sername or email')
- 
+   cy.get('#usernameFormGroup').contains('sername or email')   //PASSATO
+
+
+   cy.get('#passwordFormGroup').contains('Password')
+   
 
 
    //<label for="username" class="control-label">Username or email</label>

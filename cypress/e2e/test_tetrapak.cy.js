@@ -21,6 +21,13 @@
 
 
    //cy.get('#usernameFormGroup > .Username o email')
+    cy.get('control-label>Username or email')
+
+   
+
+   //<label for="username" class="control-label">Username or email</label>
+
+
     //cy.contains('Username o email')
     //cy.contains('Password')
    

@@ -38,7 +38,7 @@
     cy.get('#username').type('testaccount')
     cy.get('#password').type('userT@1234')
      
-    cy.get('#togglePassword').click()  
+    // cy.get('#togglePassword').click()  
    // cy.contains('Password dimenticata?')
 
 

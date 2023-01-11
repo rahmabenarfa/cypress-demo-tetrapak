@@ -23,8 +23,7 @@
    //cy.get('#usernameFormGroup > .Username o email') NON VA BENE 
     //cy.get('control-label>Username or email')       NON VA BENE 
 
-    cy.get('#reset-password').contains('Forgot Password?')
-
+    
     //cy.get('#reset-password').contains('Password dimenticata?')
 
     //cy.contains('Password dimenticata?')
@@ -43,6 +42,8 @@
    cy.get('#reset-password').contains('Forgot Password?')
 
    cy.get('#kc-login').contains('Log In')
+
+   cy.get('#username').contains('youremail@domain.com')
    
 
 
@@ -53,6 +54,12 @@
     //cy.contains('Password')
    
     cy.get('#username').type('testaccount')
+
+    cy.get('#username').contains('testaccount')
+
+
+    cy.wait(5000)
+
     cy.get('#password').type('userT@1234')
      
     // cy.get('#togglePassword').click()  

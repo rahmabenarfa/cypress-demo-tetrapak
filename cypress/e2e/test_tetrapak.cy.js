@@ -23,11 +23,13 @@
    //cy.get('#usernameFormGroup > .Username o email') NON VA BENE 
     //cy.get('control-label>Username or email')       NON VA BENE 
 
-    cy.get('#reset-password').contains('Forgot Password?')
+   // cy.get('#reset-password').contains('Forgot Password?')
+
+    cy.get('#reset-password').contains('Password dimenticata?')
 
     //cy.contains('Password dimenticata?')
   
-   
+   cy.get('control-label>Username or email').contains('Username or email')
 
    //<label for="username" class="control-label">Username or email</label>
 

@@ -39,6 +39,10 @@
 
 
    cy.get('#passwordFormGroup').contains('Password')
+
+   cy.get('#reset-password').contains('Forgot Password?')
+
+   cy.get('#kc-login').contains('Log In')
    
 
 

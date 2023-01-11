@@ -32,7 +32,9 @@
    //cy.get('control-label>Username or email').contains('Username or email')
 
    
-   cy.get('#usernameFormGroup').contains('Username or email')
+   cy.get('#usernameFormGroup').contains('Username or emai')
+
+
 
    //<label for="username" class="control-label">Username or email</label>
 

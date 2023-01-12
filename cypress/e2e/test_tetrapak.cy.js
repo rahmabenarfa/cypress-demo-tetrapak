@@ -58,6 +58,10 @@
     cy.get('#username').contains('testaccount')
 
 
+
+    cy.get('input[name="username"]').should('have.value', 'testaccount')
+
+
     cy.wait(5000)
 
     cy.get('#password').type('userT@1234')

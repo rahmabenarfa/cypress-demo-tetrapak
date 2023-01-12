@@ -35,7 +35,7 @@
    
    //cy.get('#usernameFormGroup').find('Username or email') 
 
-   cy.get('usernameFormGroup').find('Username or email')
+   cy.find('Username or email')
 
   // cy.get('name="usernameFormGroup"').should('have.value', 'Username or email')
         

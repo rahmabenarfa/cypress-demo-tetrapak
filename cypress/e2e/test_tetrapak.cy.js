@@ -32,13 +32,17 @@
    
     cy.get('#username').type('testaccount')    //inserire da tastiera "testaccount"
 
-   // cy.get('input[name="username"]').should('have.value', 'testaccount')  //controllo che ci sia la scritta inserita da tastiera 
+    cy.get('input[name="username"]').should('have.value', 'testaccount')  //controllo che ci sia la scritta inserita da tastiera 
 
-    cy.get('#username').should('have.text','testaccount')
+    //cy.get('#username').should('have.text','testaccount')
 
-   // cy.wait(5000)
+     
+    cy.wait(5000)
 
+     
     cy.get('#password').type('userT@1234')
+
+    cy.get('input[name="password"]').should('have.value','userT@1234')
      
     // cy.get('#togglePassword').click()  
    // cy.contains('Password dimenticata?')

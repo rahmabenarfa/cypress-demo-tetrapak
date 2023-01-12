@@ -59,7 +59,7 @@
 
 
 
-    cy.get('input[name="username"]').should('have.value', 'testaccount')
+    cy.get('input[value type = "text"]').should('have.value', 'testaccount')
 
 
     cy.wait(5000)

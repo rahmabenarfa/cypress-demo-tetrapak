@@ -28,25 +28,13 @@
 
    
    cy.get('#youremail@domain.com').contains('youremail@domain.com')   //FALLITO 
+  
    
-
-
-   //<label for="username" class="control-label">Username or email</label>
-
-
-    //cy.contains('Username or email')
-    //cy.contains('Password')
-   
-    cy.get('#username').type('testaccount')
-
-    //cy.get('#username').contains('testaccount')
-
-
-
-    //cy.get('name= "username"]').should('have.value', 'testaccount')
+    cy.get('#username').type('testaccount')    //inserire da tastiera "testaccount"
 
     cy.get('input[name="username"]').should('have.value', 'testaccount')  //controllo che ci sia la scritta inserita da tastiera 
 
+    cy.get('#username').should('have.text','youremail@domain.com')
 
    // cy.wait(5000)
 

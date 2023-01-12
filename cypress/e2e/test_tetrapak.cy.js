@@ -1,54 +1,33 @@
 ///<reference types="cypress"/>
 
-//it('Tetrapak', function(){
-
-  //  describe ('TETRAPAK TEST',function() {
+   //  describe ('TETRAPAK TEST',function() {
    
   
    
     it ('login credenziali corrette',function() {   //TEST1:LOGIN
 
-       // cy.getCookies()
+      
        cy.session('login', () => {
 
         cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal')
   
         
 
-    cy.get('.login-pf-page')
+    cy.get('.login-pf-page')   //controlla pagina intera 
 
-   //cy.wait(10000)
-
-
-   //cy.get('#usernameFormGroup > .Username o email') NON VA BENE 
-    //cy.get('control-label>Username or email')       NON VA BENE 
-
-    
-    //cy.get('#reset-password').contains('Password dimenticata?')
-
-    //cy.contains('Password dimenticata?')
-  
-    //cy.get('control-label>Username or email').contains('Username or email')
-
+    cy.get('#usernameFormGroup').contains('Username or email')   //all'interno di contains bisogna inserire una stringa che contenga anche solo una parte della stringa originale es: Username or emai
    
-   //cy.get('#usernameFormGroup').contains('Username or email')   //all'interno di contains bisogna inserire una stringa che contenga anche solo una parte della stringa originale es: Username or emai
-   
-   //cy.get('#usernameFormGroup').find('Username or email') 
-
-   cy.find('Username or email')
-
-  // cy.get('name="usernameFormGroup"').should('have.value', 'Username or email')
-        
-   //cy.get('#usernameFormGroup').contains('sername or email')   //PASSATO
+     //cy.get('#usernameFormGroup').contains('sername or email')   //PASSATO
 
 
-   cy.get('#passwordFormGroup').contains('Password')
+   cy.get('#passwordFormGroup').contains('Password')  
 
    cy.get('#reset-password').contains('Forgot Password?')
 
    cy.get('#kc-login').contains('Log In')
 
-   //cy.get('#username').contains('youremail@domain.com')
+   
+   cy.get('#youremail@domain.com').contains('youremail@domain.com')   //FALLITO 
    
 
 

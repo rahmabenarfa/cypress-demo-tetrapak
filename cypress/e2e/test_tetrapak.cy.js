@@ -30,11 +30,11 @@
    //cy.get('#youremail@domain.com').contains('youremail@domain.com')   //FALLITO 
   
    
-    //cy.get('#username').type('testaccount')    //inserire da tastiera "testaccount"
+    cy.get('#username').type('testaccount')    //inserire da tastiera "testaccount"
 
    // cy.get('input[name="username"]').should('have.value', 'testaccount')  //controllo che ci sia la scritta inserita da tastiera 
 
-    cy.get('#username').should('have.text','youremail@domain.com')
+    cy.get('#username').should('have.text','testaccount')
 
    // cy.wait(5000)
 

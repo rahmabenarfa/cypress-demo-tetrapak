@@ -34,9 +34,7 @@
 
     cy.get('input[name="username"]').should('have.value', 'testaccount')  //controllo che ci sia la scritta inserita da tastiera 
 
-    //cy.get('#username').should('have.text','testaccount')
-
-     
+    
     cy.wait(5000)
 
      
@@ -44,22 +42,20 @@
 
     cy.get('input[name="password"]').should('have.value','userT@1234')
      
-    // cy.get('#togglePassword').click()  
-   // cy.contains('Password dimenticata?')
+     
+    cy.get('#togglePassword').click()  
+  
+    
+    cy.get('#kc-login').click()
 
-
-    cy.wait(10000)
    
     //cy.contains('Accedi').click()
 
     //cy.contains('Welcome')
 
-    //cy.url().should('contain', '/login-successful')
+    
 
-    // cy.contains('Available Applications')
-      //  cy.contains('Material Modeler')
-      //  cy.contains('Open App').click()
-      //  cy.contains('Material Modeler')
+    
        })
      })
 

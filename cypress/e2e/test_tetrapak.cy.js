@@ -33,7 +33,9 @@
    
    //cy.get('#usernameFormGroup').contains('Username or email')   //all'interno di contains bisogna inserire una stringa che contenga anche solo una parte della stringa originale es: Username or emai
    
-   cy.get('#usernameFormGroup').find('Username or email') 
+   //cy.get('#usernameFormGroup').find('Username or email') 
+
+   cy.get('#usernameFormGroup > .control-label').find('Username or email')
 
   // cy.get('name="usernameFormGroup"').should('have.value', 'Username or email')
         

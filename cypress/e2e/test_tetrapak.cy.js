@@ -31,8 +31,10 @@
     //cy.get('control-label>Username or email').contains('Username or email')
 
    
-   cy.get('#usernameFormGroup').contains('Username or email')   //all'interno di contains bisogna inserire una stringa che contenga anche solo una parte della stringa originale es: Username or emai
+   //cy.get('#usernameFormGroup').contains('Username or email')   //all'interno di contains bisogna inserire una stringa che contenga anche solo una parte della stringa originale es: Username or emai
 
+
+   cy.get('input[name="usernameFormGroup"]').should('have.value', 'Username or email')
         
    //cy.get('#usernameFormGroup').contains('sername or email')   //PASSATO
 
@@ -61,10 +63,10 @@
 
     //cy.get('name= "username"]').should('have.value', 'testaccount')
 
-    cy.get('input[name="username"]').should('have.value', 'testaccount')
+    cy.get('input[name="username"]').should('have.value', 'testaccount')  //controllo che ci sia la scritta inserita da tastiera 
 
 
-    cy.wait(5000)
+   // cy.wait(5000)
 
     cy.get('#password').type('userT@1234')
      

@@ -126,7 +126,7 @@
 
 
      
-     it.skip ('Material Modeler',function() {   //TEST4:Material Modeler
+     it ('Material Modeler',function() {   //TEST4:Material Modeler
        // cy.getCookies()
         
        cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal/material-modeler#/')

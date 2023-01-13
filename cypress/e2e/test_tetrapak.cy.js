@@ -60,24 +60,25 @@
      })
 
 
-    it.skip ('login password corretta,username sbagliata',function() {   //TEST2:LOGIN
+    it ('login password corretta,username sbagliata',function() {   //TEST2:LOGIN
 
         cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal')
   
-       // cy.getCookies()
+       
        // cy.contains('Username o email')
        // cy.contains('Password')
     
          cy.get('#username').type('testaccount1')
+
          cy.get('#password').type('userT@1234')
         
-         //cy.get('#togglePassword').click()
+         cy.get('#togglePassword').click()
     
         cy.wait(1000)
     
          cy.get('#kc-login').click()
 
-         cy.contains('Username o password non validi')
+         cy.get('#.kc-feedback-text').cy.contains('Invalid username or password. Your account will be temporarily locked if you insert a wrong password too often')
     
      })
     

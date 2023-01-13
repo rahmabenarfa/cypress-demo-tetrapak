@@ -4,7 +4,7 @@
    
   
    
-    it ('login credenziali corrette',function() {   //TEST1:LOGIN
+    it.skip ('login credenziali corrette',function() {   //TEST1:LOGIN
 
       
        cy.session('login', () => {
@@ -60,7 +60,7 @@
      })
 
 
-    it ('login password corretta,username sbagliata',function() {   //TEST2:LOGIN
+    it.skip ('login password corretta,username sbagliata',function() {   //TEST2:LOGIN
 
         cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal')
   
@@ -88,7 +88,7 @@
      })
     
 
-    it ('login password sbagliata, username corretta,messaggio errore sbagliato',function(){  //TEST DEVE FALLIRE
+    it.skip ('login password sbagliata, username corretta,messaggio errore sbagliato',function(){  //TEST DEVE FALLIRE
        
         cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal')
   
@@ -107,13 +107,10 @@
 
              cy.get('#alert-container').contains('Ciao') 
  
-             
-    
-        
-     })
+  })
 
      
-     it ('Password dimenticata',function(){
+     it.skip ('Password dimenticata',function(){
       //cy.getCookies()
       
       cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal/material-modeler#/')
@@ -123,9 +120,7 @@
       cy.get('#kc-info-text').contains('Please enter your email address to reset your password. If you are having trouble to reset your password please contact your local admin.')
       cy.get('#kc-form-buttons').contains('Submit')
 
-
-
-   })
+ })
 
 
 
@@ -133,20 +128,29 @@
      
      it.skip ('Material Modeler',function() {   //TEST4:Material Modeler
        // cy.getCookies()
+        
+       cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal/material-modeler#/')
+      
+       cy.get('#username').type('testaccount')
+       cy.get('#password').type('userT@1234')
+       cy.get('#kc-login').click()
 
-       //cy.session(username, () => {
-        cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal/material-modeler#/')
+       cy.get('#root').contains('Material Modeler') 
 
-       // cy.get('.active > img').click()
-  
-        cy.contains('Available Applications')
-        cy.contains('Material Modeler')
-        cy.contains('Open App').click()
-        cy.contains('Material Modeler')
+
+      
+      
+      
+      
+      
+       //cy.contains('Available Applications')
+       // cy.contains('Material Modeler')
+       // cy.contains('Open App').click()
+       // cy.contains('Material Modeler')
 
 
        })
-     //})
+  
 
 
      

@@ -78,7 +78,7 @@
     
          cy.get('#kc-login').click()
 
-         cy.get('#.kc-feedback-text').cy.contains('Invalid username or password. Your account will be temporarily locked if you insert a wrong password too often')
+         cy.get('#.kc-feedback-text').contains('Invalid username or password. Your account will be temporarily locked if you insert a wrong password too often')
     
      })
     

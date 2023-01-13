@@ -82,13 +82,13 @@
 
          
 
-         cy.get('#alert-container').contains('Invalid username or password. Your account will be temporarily locked if you insert a wrong password too often')
+        cy.get('#alert-container').contains('Invalid username or password. Your account will be temporarily locked if you insert a wrong password too often')
 
     
      })
     
 
-    it.skip ('login password sbagliata, username corretta',function(){
+    it ('login password sbagliata, username corretta,messaggio errore sbagliato',function(){  //TEST DEVE FALLIRE
        
         cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal')
   
@@ -96,17 +96,38 @@
           //  cy.contains('Password')
           
              cy.get('#username').type('testaccount')
+
              cy.get('#password').type('userT@12345')
-           //  cy.get('#togglePassword').click()
+
+             cy.get('#togglePassword').click()
         
             cy.wait(1000)
         
              cy.get('#kc-login').click()
+
+             cy.get('#alert-container').contains('Ciao') 
  
-             cy.contains('Ciao')    //test fallito
+             
     
         
      })
+
+     
+     it.skip ('Password dimenticata',function(){
+      //cy.getCookies()
+      
+      cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal/material-modeler#/')
+      
+      cy.get('#reset-password').click()
+      cy.get('#resetPasswordFormGroup').contains('Email')
+      cy.get('#kc-info-text').contains('Please enter your email address to reset your password. If you are having trouble to reset your password please contact your local admin.')
+      cy.get('#kc-form-buttons').contains('Submit')
+
+
+
+   })
+
+
 
 
      
@@ -128,20 +149,7 @@
      //})
 
 
-     it.skip ('Password dimenticata',function(){
-        //cy.getCookies()
-        cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal/material-modeler#/')
-        
-        cy.get('#reset-password').click()
-        cy.contains('Email')
-        cy.contains('Please enter your email address to reset your password. If you are having trouble to reset your password please contact your local admin.')
-        cy.contains('Invia')
-
-
-
-     })
-
-
+     
     
 
 

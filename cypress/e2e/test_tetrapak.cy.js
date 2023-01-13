@@ -113,7 +113,7 @@
      })
 
      
-     it.skip ('Password dimenticata',function(){
+     it ('Password dimenticata',function(){
       //cy.getCookies()
       
       cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal/material-modeler#/')

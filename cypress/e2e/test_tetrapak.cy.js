@@ -4,7 +4,7 @@
    
   
    
-    it.skip ('login credenziali corrette',function() {   //TEST1:LOGIN
+    it ('login credenziali corrette',function() {   //TEST1:LOGIN
 
       
        cy.session('login', () => {
@@ -35,7 +35,7 @@
     cy.get('input[name="username"]').should('have.value', 'testaccount')  //controllo che ci sia la scritta inserita da tastiera 
 
     
-    cy.wait(5000)
+    cy.wait(1000)
 
      
     cy.get('#password').type('userT@1234')
@@ -60,7 +60,7 @@
      })
 
 
-    it.skip ('login password corretta,username sbagliata',function() {   //TEST2:LOGIN
+    it ('login password corretta,username sbagliata',function() {   //TEST2:LOGIN
 
         cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal')
   
@@ -78,21 +78,17 @@
     
          cy.get('#kc-login').click()
 
-        // cy.get('#.kc-feedback-text').contains('Invalid username or password. Your account will be temporarily locked if you insert a wrong password too often')
-
-         
-
         cy.get('#alert-container').contains('Invalid username or password. Your account will be temporarily locked if you insert a wrong password too often')
 
     
      })
     
 
-    it.skip ('login password sbagliata, username corretta,messaggio errore sbagliato',function(){  //TEST DEVE FALLIRE
+    it ('login password sbagliata, username corretta,messaggio errore sbagliato',function(){  //TEST DEVE FALLIRE
        
         cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal')
   
-          //  cy.contains('Username o email')
+          //  cy.contains('Username o email')  NON FUNZIONA SU AZURE 
           //  cy.contains('Password')
           
              cy.get('#username').type('testaccount')
@@ -110,7 +106,8 @@
   })
 
      
-     it.skip ('Password dimenticata',function(){
+     it
+      ('Password dimenticata',function(){
       //cy.getCookies()
       
       cy.visit('https://ta-dpo-aks-test-01.westeurope.cloudapp.azure.com/oiadp-portal/material-modeler#/')
@@ -149,14 +146,4 @@
        // cy.contains('Material Modeler')
 
 
-       })
-  
-
-
-     
-    
-
-
-
-//})
-//})
+       }) 
